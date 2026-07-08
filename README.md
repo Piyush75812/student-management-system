@@ -113,7 +113,7 @@ Start the backend server:
 ```bash
 npm run dev
 ```
-The API will run at **http://localhost:5000**
+The API will run at **http://localhost:7000**
 
 ### 4. Set up the Frontend
 The frontend is plain HTML/CSS/JS — no build step required.
