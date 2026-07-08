@@ -1,0 +1,311 @@
+/* ===================================================
+   Student Management System - Global Styles
+   Theme: Blue & White
+=================================================== */
+
+:root {
+    --primary-color: #2563eb;
+    --primary-dark: #1e40af;
+    --primary-light: #dbeafe;
+    --secondary-color: #f8fafc;
+    --text-dark: #1e293b;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --success-color: #16a34a;
+    --danger-color: #dc2626;
+    --warning-color: #f59e0b;
+    --sidebar-width: 250px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--secondary-color);
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    color: var(--text-dark);
+}
+
+/* ---------------- Login Page ---------------- */
+.login-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+}
+
+.login-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    animation: fadeInUp 0.5s ease;
+}
+
+.login-card .logo-circle {
+    width: 70px;
+    height: 70px;
+    background: var(--primary-light);
+    color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    margin: 0 auto 15px;
+}
+
+/* ---------------- Sidebar ---------------- */
+.sidebar {
+    width: var(--sidebar-width);
+    max-width: 85vw;
+    background: #fff;
+    border-right: 1px solid var(--border-color);
+    min-height: 100vh;
+    height: 100vh;
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease;
+    z-index: 1040;
+}
+
+.sidebar-brand {
+    padding: 20px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidebar .nav-link {
+    color: var(--text-muted);
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 500;
+    border-left: 3px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.sidebar .nav-link:hover {
+    background: var(--primary-light);
+    color: var(--primary-color);
+}
+
+.sidebar .nav-link.active {
+    background: var(--primary-light);
+    color: var(--primary-color);
+    border-left: 3px solid var(--primary-color);
+}
+
+.main-content {
+    margin-left: var(--sidebar-width);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: margin-left 0.3s ease;
+}
+
+/* ---------------- Topbar ---------------- */
+.topbar {
+    background: #fff;
+    border-bottom: 1px solid var(--border-color);
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+}
+
+.sidebar-toggle-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    color: var(--text-dark);
+}
+
+/* ---------------- Cards ---------------- */
+.stat-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.stat-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.content-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-color);
+}
+
+/* ---------------- Buttons ---------------- */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    border-radius: 8px;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+.btn, .form-control, .form-select {
+    border-radius: 8px;
+}
+
+/* ---------------- Table ---------------- */
+.table-responsive {
+    border-radius: 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table-responsive table th,
+.table-responsive table td {
+    white-space: nowrap;
+}
+
+table thead {
+    background-color: var(--primary-light);
+}
+
+table thead th {
+    color: var(--primary-dark);
+    font-weight: 600;
+    border: none;
+}
+
+/* ---------------- Attendance Status Buttons ---------------- */
+.attendance-status-group .btn {
+    min-width: 40px;
+    font-weight: 600;
+}
+
+/* ---------------- Footer ---------------- */
+.footer {
+    text-align: center;
+    padding: 16px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    background: #fff;
+}
+
+/* ---------------- Loading Spinner Overlay ---------------- */
+.spinner-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+/* ---------------- Animations ---------------- */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeInUp 0.4s ease;
+}
+
+/* ---------------- 404 Page ---------------- */
+.error-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: var(--secondary-color);
+}
+
+.error-page h1 {
+    font-size: 8rem;
+    color: var(--primary-color);
+    font-weight: 800;
+}
+
+/* ---------------- Responsive ---------------- */
+@media (max-width: 991px) {
+    .sidebar {
+        transform: translateX(-100%);
+    }
+    .sidebar.show {
+        transform: translateX(0);
+        box-shadow: 4px 0 24px rgba(0, 0, 0, 0.15);
+    }
+    .main-content {
+        margin-left: 0;
+    }
+    .sidebar-toggle-btn {
+        display: inline-block;
+    }
+}
+
+@media (max-width: 576px) {
+    .container-fluid.p-4 {
+        padding: 12px !important;
+    }
+    .content-card {
+        padding: 14px;
+    }
+    .stat-card {
+        padding: 16px;
+    }
+    .topbar {
+        padding: 10px 14px;
+    }
+    .topbar h5 {
+        font-size: 1rem;
+    }
+    #profileName {
+        display: none;
+    }
+    .login-card {
+        padding: 28px 20px;
+        margin: 16px;
+    }
+    .error-page h1 {
+        font-size: 4.5rem;
+    }
+    .error-page {
+        padding: 20px;
+    }
+}
